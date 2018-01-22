@@ -6,7 +6,7 @@
 #include <qtxml/qdomdocument>
 #include <QWidget.h>
 #include <QPoint.h>
-#include <QWebView.h>
+#include <QtWebEngineWidgets/QtWebEngineWidgets>
 #include <QMap.h>
 
 #include <iostream>
@@ -47,7 +47,7 @@ class GoogleMapCollageWindow : public QWidget
 	FitParser* _fit_parser;
 
 	// The window to display google maps
-	QWebView *_view;
+	QWebEngineView *_view;
 
 	std::vector<std::pair<LatLng, int> > _accumulated_points; // first=lat,long, second=count
 	std::vector<std::pair<int, double> > _accumulated_point_extra_info; // first=ride id, second=time

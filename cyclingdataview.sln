@@ -1,20 +1,25 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cyclingdataview", "cyclingdataview.vcproj", "{94AE252A-C865-41D1-B035-018948FF6099}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cyclingdataview", "cyclingdataview.vcxproj", "{94AE252A-C865-41D1-B035-018948FF6099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{94AE252A-C865-41D1-B035-018948FF6099}.Debug|Win32.ActiveCfg = Debug|Win32
-		{94AE252A-C865-41D1-B035-018948FF6099}.Debug|Win32.Build.0 = Debug|Win32
-		{94AE252A-C865-41D1-B035-018948FF6099}.Release|Win32.ActiveCfg = Release|Win32
-		{94AE252A-C865-41D1-B035-018948FF6099}.Release|Win32.Build.0 = Release|Win32
+		{94AE252A-C865-41D1-B035-018948FF6099}.Debug|x64.ActiveCfg = Debug|x64
+		{94AE252A-C865-41D1-B035-018948FF6099}.Debug|x64.Build.0 = Debug|x64
+		{94AE252A-C865-41D1-B035-018948FF6099}.Release|x64.ActiveCfg = Release|x64
+		{94AE252A-C865-41D1-B035-018948FF6099}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B86C21E-1713-43C6-B578-58B6825C362E}
 	EndGlobalSection
 EndGlobal

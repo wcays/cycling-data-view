@@ -4,7 +4,7 @@
 #include <qtxml/qdomdocument>
 #include <QWidget.h>
 #include <QPoint.h>
-#include <QWebView.h>
+#include <QtWebEngineWidgets/QtWebEngineWidgets>
 #include <QMap.h>
 
 #include <boost/shared_ptr.hpp>
@@ -79,7 +79,7 @@ private slots:
 	void setStartEndMarkers(int idx_start, int idx_end);
 
 	// The window to display google maps
-	QWebView *_view;
+	QWebEngineView *_view;
 	// The start index of selection to highlight
 	int _selection_begin_idx;
 	// The end index of selection to highlight

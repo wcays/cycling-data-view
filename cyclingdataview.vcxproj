@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{94AE252A-C865-41D1-B035-018948FF6099}</ProjectGuid>
+    <RootNamespace>cyclingdataview</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2020</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(BOOSTDIR);$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QWTDIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QWTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Qt5Guid.lib;Qt5Core.lib;Qt5Widgetsd.lib;qtmaind.lib;Qt5Xmld.lib;qwtd.lib;Qt5WebEngined.lib;Qt5WebEngineCored.lib;Qt5WebEngineWidgetsd.lib;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\Vfw32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)imageformats
+copy $(QTDIR)\plugins\imageformats\qjpegd.dll $(OutDir)imageformats\.
+copy $(QTDIR)\plugins\imageformats\qicod.dll $(OutDir)imageformats\.
+mkdir $(OutDir)resources
+copy .\resources\rideviewer_head128x128.ico $(OutDir)resources\.
+copy .\resources\rideviewer256x256.ico $(OutDir)resources\.
+copy .\resources\about_screen.png $(OutDir)resources\.
+copy .\resources\splash_screen.png $(OutDir)resources\.
+copy .\resources\marker_image.png $(OutDir)resources\.
+copy .\resources\marker_shadow.png $(OutDir)resources\.
+copy .\resources\start_image.png $(OutDir)resources\.
+copy .\resources\start_shadow.png $(OutDir)resources\.
+copy .\resources\finish_image.png $(OutDir)resources\.
+copy .\resources\finish_shadow.png $(OutDir)resources\.
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(BOOSTDIR);$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QWTDIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QWTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Qt5Gui.lib;Qt5Core.lib;Qt5Widgets.lib;qtmain.lib;Qt5Xml.lib;Qt5WebEngine.lib;Qt5WebEngineCore.lib;Qt5WebEngineWidgets.lib;qwt.lib;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\Vfw32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)imageformats
+copy $(QTDIR)\plugins\imageformats\qjpeg.dll $(OutDir)imageformats\.
+copy $(QTDIR)\plugins\imageformats\qicod.dll $(OutDir)imageformats\.
+mkdir $(OutDir)resources
+copy .\resources\rideviewer_head128x128.ico $(OutDir)resources\.
+copy .\resources\rideviewer256x256.ico $(OutDir)resources\.
+copy .\resources\about_screen.png $(OutDir)resources\.
+copy .\resources\splash_screen.png $(OutDir)resources\.
+copy .\resources\marker_image.png $(OutDir)resources\.
+copy .\resources\marker_shadow.png $(OutDir)resources\.
+copy .\resources\start_image.png $(OutDir)resources\.
+copy .\resources\start_shadow.png $(OutDir)resources\.
+copy .\resources\finish_image.png $(OutDir)resources\.
+copy .\resources\finish_shadow.png $(OutDir)resources\.
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cycledataview.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aboutwindow.cpp" />
+    <ClCompile Include="barchartitem.cpp" />
+    <ClCompile Include="baseparser.cpp" />
+    <ClCompile Include="cyclingdataview.cpp" />
+    <ClCompile Include="datalog.cpp" />
+    <ClCompile Include="dataprocessing.cpp" />
+    <ClCompile Include="datastatisticswindow.cpp" />
+    <ClCompile Include="dateselectorwidget.cpp" />
+    <ClCompile Include="fitencoder.cpp" />
+    <ClCompile Include="fitparser.cpp" />
+    <ClCompile Include="garminfitsdk\fit.cpp" />
+    <ClCompile Include="garminfitsdk\fit_accumulated_field.cpp" />
+    <ClCompile Include="garminfitsdk\fit_accumulator.cpp" />
+    <ClCompile Include="garminfitsdk\fit_buffered_record_mesg_broadcaster.cpp" />
+    <ClCompile Include="garminfitsdk\fit_buffer_encode.cpp" />
+    <ClCompile Include="garminfitsdk\fit_crc.cpp" />
+    <ClCompile Include="garminfitsdk\fit_decode.cpp" />
+    <ClCompile Include="garminfitsdk\fit_encode.cpp" />
+    <ClCompile Include="garminfitsdk\fit_factory.cpp" />
+    <ClCompile Include="garminfitsdk\fit_field.cpp" />
+    <ClCompile Include="garminfitsdk\fit_field_definition.cpp" />
+    <ClCompile Include="garminfitsdk\fit_mesg.cpp" />
+    <ClCompile Include="garminfitsdk\fit_mesg_broadcaster.cpp" />
+    <ClCompile Include="garminfitsdk\fit_mesg_definition.cpp" />
+    <ClCompile Include="garminfitsdk\fit_mesg_with_event_broadcaster.cpp" />
+    <ClCompile Include="garminfitsdk\fit_profile.cpp" />
+    <ClCompile Include="garminfitsdk\fit_unicode.cpp" />
+    <ClCompile Include="googlemapcollagewindow.cpp" />
+    <ClCompile Include="googlemapwindow.cpp" />
+    <ClCompile Include="hrzoneitem.cpp" />
+    <ClCompile Include="logdirectorysummary.cpp" />
+    <ClCompile Include="logeditorwindow.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="moc_datastatisticswindow.cpp" />
+    <ClCompile Include="moc_dateselectorwidget.cpp" />
+    <ClCompile Include="moc_googlemapcollagewindow.cpp" />
+    <ClCompile Include="moc_googlemapwindow.cpp" />
+    <ClCompile Include="moc_logeditorwindow.cpp" />
+    <ClCompile Include="moc_mainwindow.cpp" />
+    <ClCompile Include="moc_plotwindow.cpp" />
+    <ClCompile Include="moc_rideintervalfinderwindow.cpp" />
+    <ClCompile Include="moc_rideselectionwindow.cpp" />
+    <ClCompile Include="moc_specifyuserwindow.cpp" />
+    <ClCompile Include="moc_totalswindow.cpp" />
+    <ClCompile Include="plotwindow.cpp" />
+    <ClCompile Include="rideintervalfinderwindow.cpp" />
+    <ClCompile Include="rideselectionwindow.cpp" />
+    <ClCompile Include="specifyuserwindow.cpp" />
+    <ClCompile Include="tcxparser.cpp" />
+    <ClCompile Include="totalswindow.cpp" />
+    <ClCompile Include="user.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aboutwindow.h" />
+    <ClInclude Include="barchartitem.h" />
+    <ClInclude Include="baseparser.h" />
+    <ClInclude Include="colours.h" />
+    <ClInclude Include="datalog.h" />
+    <ClInclude Include="dataprocessing.h" />
+    <CustomBuild Include="datastatisticswindow.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="dateselectorwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="fitencoder.h" />
+    <ClInclude Include="fitparser.h" />
+    <ClInclude Include="garminfitsdk\fit.hpp" />
+    <ClInclude Include="garminfitsdk\fit_accumulated_field.hpp" />
+    <ClInclude Include="garminfitsdk\fit_accumulator.hpp" />
+    <ClInclude Include="garminfitsdk\fit_activity_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_activity_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_bike_profile_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_bike_profile_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_blood_pressure_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_blood_pressure_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_buffered_record_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_buffered_record_mesg_broadcaster.hpp" />
+    <ClInclude Include="garminfitsdk\fit_buffered_record_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_buffer_encode.hpp" />
+    <ClInclude Include="garminfitsdk\fit_capabilities_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_capabilities_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_config.hpp" />
+    <ClInclude Include="garminfitsdk\fit_course_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_course_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_course_point_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_course_point_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_crc.hpp" />
+    <ClInclude Include="garminfitsdk\fit_decode.hpp" />
+    <ClInclude Include="garminfitsdk\fit_device_info_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_device_info_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_device_settings_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_device_settings_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_encode.hpp" />
+    <ClInclude Include="garminfitsdk\fit_event_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_event_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_factory.hpp" />
+    <ClInclude Include="garminfitsdk\fit_field.hpp" />
+    <ClInclude Include="garminfitsdk\fit_field_capabilities_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_field_capabilities_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_field_definition.hpp" />
+    <ClInclude Include="garminfitsdk\fit_file_capabilities_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_file_capabilities_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_file_creator_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_file_creator_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_file_id_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_file_id_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_goal_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_goal_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_hrm_profile_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_hrm_profile_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_hrv_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_hrv_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_hr_zone_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_hr_zone_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_lap_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_lap_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_broadcaster.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_capabilities_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_capabilities_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_definition.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_definition_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_with_event.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_with_event_broadcaster.hpp" />
+    <ClInclude Include="garminfitsdk\fit_mesg_with_event_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_met_zone_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_met_zone_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_pad_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_pad_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_power_zone_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_power_zone_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_profile.hpp" />
+    <ClInclude Include="garminfitsdk\fit_record_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_record_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_runtime_exception.hpp" />
+    <ClInclude Include="garminfitsdk\fit_sdm_profile_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_sdm_profile_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_session_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_session_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_software_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_software_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_sport_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_sport_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_totals_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_totals_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_unicode.hpp" />
+    <ClInclude Include="garminfitsdk\fit_user_profile_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_user_profile_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_weight_scale_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_weight_scale_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_workout_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_workout_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_workout_step_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_workout_step_mesg_listener.hpp" />
+    <ClInclude Include="garminfitsdk\fit_zones_target_mesg.hpp" />
+    <ClInclude Include="garminfitsdk\fit_zones_target_mesg_listener.hpp" />
+    <CustomBuild Include="googlemapcollagewindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="googlemapwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="hrzoneitem.h" />
+    <ClInclude Include="latlng.h" />
+    <ClInclude Include="logdirectorysummary.h" />
+    <CustomBuild Include="logeditorwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="plotwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="qwtcustomplotpicker.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="qwtcustomplotzoomer.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="rideintervalfinderwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="rideselectionwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="specifyuserwindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="tcxparser.h" />
+    <CustomBuild Include="totalswindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc%27ing file %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe %(Filename)%(Extension) -o moc_%(Filename).cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="user.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_x64="msvc2017_64" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

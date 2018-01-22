@@ -4,9 +4,7 @@
 #include "dataprocessing.h"
 #include "colours.h"
 
-#include <QWebView.h>
-#include <QWebPage.h>
-#include <QWebFrame.h>
+#include <QtWebEngineWidgets/QtWebEngineWidgets>
 #include <QDir.h>
 #include <QComboBox.h>
 #include <QLabel.h>
@@ -37,7 +35,7 @@ std::string hexFromColour(const QColor& c)
 
 /******************************************************/
 // Helper class to fool google maps to give desktop view
-class ChromePage : public QWebPage
+class ChromePage : public QWebEnginePage
 {
 	virtual QString userAgentForUrl(const QUrl& url) const {
 	 return "Chrome/1.0";
@@ -148,7 +146,7 @@ public:
 GoogleMapWindow::GoogleMapWindow():
 _data_log()
 {
-	_view = new QWebView();
+	_view = new QWebEngineView();
 	_view->setPage(new ChromePage()); // hack required to get google maps to display for a desktop, not touchscreen
 	_selection_begin_idx = UNDEFINED_IDX;
 	_selection_end_idx = UNDEFINED_IDX;
@@ -255,7 +253,7 @@ void GoogleMapWindow::setMarkerPosition(int idx)
 		stream.setf(ios::fixed,ios::floatfield);
 
 		stream << "setMarker(" << ltd << "," << lgd << ");";
-		_view->page()->mainFrame()->evaluateJavaScript(QString::fromStdString(stream.str()));
+		_view->page()->runJavaScript(QString::fromStdString(stream.str()));
 	}
 }
 
@@ -270,7 +268,7 @@ void GoogleMapWindow::setSelection(int idx_start, int idx_end, bool zoom_map)
 		stream << "setSelectionPath(coords, true);";
 	else
 		stream << "setSelectionPath(coords, false);";
-	_view->page()->mainFrame()->evaluateJavaScript(QString::fromStdString(stream.str()));
+	_view->page()->runJavaScript(QString::fromStdString(stream.str()));
 }
 
 /******************************************************/
@@ -303,7 +301,7 @@ void GoogleMapWindow::setStartEndMarkers(int idx_start, int idx_end)
 		<< defineStartEndCoords(idx_start, idx_end) << endl // create a path from GPS coords
 		<< "];" << endl;
 	stream << "setSelectionStartEnd(coords);";
-	_view->page()->mainFrame()->evaluateJavaScript(QString::fromStdString(stream.str()));
+	_view->page()->runJavaScript(QString::fromStdString(stream.str()));
 }
 
 /******************************************************/
@@ -343,7 +341,7 @@ void GoogleMapWindow::deleteSelection()
 
 	ostringstream stream;
 	stream << "deleteSelectionPath();";
-	_view->page()->mainFrame()->evaluateJavaScript(QString::fromStdString(stream.str()));
+	_view->page()->runJavaScript(QString::fromStdString(stream.str()));
 }
 
 /******************************************************/
@@ -466,7 +464,7 @@ void GoogleMapWindow::definePathColour()
 		stream << "strokeRidePathHRZones(key);";
 	else
 		stream << "strokeRidePath(key);";
-	_view->page()->mainFrame()->evaluateJavaScript(QString::fromStdString(stream.str()));
+	_view->page()->runJavaScript(QString::fromStdString(stream.str()));
 
 	// Draw the colour bar appropriately
 	if (_path_colour_scheme->currentIndex() == 2) // HR zone colour bar

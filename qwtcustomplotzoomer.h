@@ -7,7 +7,7 @@
 class QwtCustomPlotZoomer : public QwtPlotZoomer
 {
 public:
-	QwtCustomPlotZoomer(int x_axis, int y_axis, QwtPlotCanvas* canvas, bool do_replot=true);
+	QwtCustomPlotZoomer(int x_axis, int y_axis, QWidget* canvas, bool do_replot = true);
 
 protected:
 	// Override user selected points to only take their x coord selection

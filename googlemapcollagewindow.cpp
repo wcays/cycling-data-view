@@ -7,9 +7,7 @@
 #include "dateselectorwidget.h"
 #include "logdirectorysummary.h"
 
-#include <QWebView.h>
-#include <QWebPage.h>
-#include <QWebFrame.h>
+#include <QtWebEngineWidgets/QtWebEngineWidgets>
 #include <QDir.h>
 #include <QComboBox.h>
 #include <QPushButton.h>
@@ -29,7 +27,7 @@ using namespace std;
 
 /******************************************************/
 // Helper class to fool google maps to give desktop view
-class ChromePage : public QWebPage
+class ChromePage : public QWebEnginePage
 {
 	virtual QString userAgentForUrl(const QUrl& url) const {
 	 return "Chrome/1.0";
@@ -91,7 +89,7 @@ _user(user)
 	setWindowTitle("RideCollage");
 	setWindowIcon(QIcon("./resources/rideviewer_head128x128.ico")); 
 
-	_view = new QWebView();
+	_view = new QWebEngineView();
 	_view->setPage(new ChromePage()); // hack required to get google maps to display for a desktop, not touchscreen
 
 	_tcx_parser = new TcxParser();

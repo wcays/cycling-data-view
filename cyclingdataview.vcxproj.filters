@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{70305293-3a62-4e82-be2f-5be72fbaf0aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer 1 - Data">
+      <UniqueIdentifier>{197d3f0f-ad81-43b4-936b-75f5491d92d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer 2 - GUI">
+      <UniqueIdentifier>{a837e960-c269-462a-a34f-538195f25b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer 2 - GUI\Generated Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{7f467ab7-7348-4c34-8146-d8e28a8dca3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Garmin Fit SDK">
+      <UniqueIdentifier>{622a4b38-bd1b-4770-915c-39ba6057b7b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cycledataview.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="baseparser.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="datalog.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="dataprocessing.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="fitencoder.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="fitparser.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="logdirectorysummary.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="tcxparser.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="user.cpp">
+      <Filter>Layer 1 - Data</Filter>
+    </ClCompile>
+    <ClCompile Include="aboutwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="barchartitem.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="datastatisticswindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="dateselectorwidget.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="googlemapcollagewindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="googlemapwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="hrzoneitem.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="logeditorwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="plotwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="rideintervalfinderwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="rideselectionwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="specifyuserwindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="totalswindow.cpp">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_datastatisticswindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_dateselectorwidget.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_googlemapcollagewindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_googlemapwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_logeditorwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_mainwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_plotwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_rideintervalfinderwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_rideselectionwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_specifyuserwindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_totalswindow.cpp">
+      <Filter>Layer 2 - GUI\Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cyclingdataview.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_accumulated_field.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_accumulator.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_buffer_encode.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_buffered_record_mesg_broadcaster.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_crc.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_decode.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_encode.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_factory.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_field.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_field_definition.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_mesg.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_mesg_broadcaster.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_mesg_definition.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_mesg_with_event_broadcaster.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_profile.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="garminfitsdk\fit_unicode.cpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="baseparser.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="datalog.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="dataprocessing.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="fitencoder.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="fitparser.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="latlng.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="logdirectorysummary.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="tcxparser.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="user.h">
+      <Filter>Layer 1 - Data</Filter>
+    </ClInclude>
+    <ClInclude Include="aboutwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="barchartitem.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="colours.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="hrzoneitem.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_accumulated_field.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_accumulator.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_activity_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_activity_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_bike_profile_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_bike_profile_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_blood_pressure_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_blood_pressure_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_buffer_encode.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_buffered_record_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_buffered_record_mesg_broadcaster.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_buffered_record_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_capabilities_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_capabilities_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_config.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_course_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_course_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_course_point_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_course_point_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_crc.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_decode.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_device_info_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_device_info_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_device_settings_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_device_settings_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_encode.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_event_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_event_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_factory.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_field.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_field_capabilities_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_field_capabilities_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_field_definition.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_file_capabilities_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_file_capabilities_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_file_creator_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_file_creator_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_file_id_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_file_id_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_goal_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_goal_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_hr_zone_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_hr_zone_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_hrm_profile_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_hrm_profile_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_hrv_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_hrv_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_lap_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_lap_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_broadcaster.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_capabilities_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_capabilities_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_definition.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_definition_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_with_event.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_with_event_broadcaster.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_mesg_with_event_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_met_zone_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_met_zone_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_pad_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_pad_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_power_zone_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_power_zone_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_profile.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_record_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_record_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_runtime_exception.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_sdm_profile_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_sdm_profile_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_session_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_session_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_software_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_software_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_sport_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_sport_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_totals_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_totals_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_unicode.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_user_profile_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_user_profile_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_weight_scale_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_weight_scale_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_workout_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_workout_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_workout_step_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_workout_step_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_zones_target_mesg.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="garminfitsdk\fit_zones_target_mesg_listener.hpp">
+      <Filter>Garmin Fit SDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="datastatisticswindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dateselectorwidget.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="googlemapcollagewindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="googlemapwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="logeditorwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="plotwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qwtcustomplotpicker.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rideintervalfinderwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rideselectionwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="specifyuserwindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="totalswindow.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qwtcustomplotzoomer.h">
+      <Filter>Layer 2 - GUI</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

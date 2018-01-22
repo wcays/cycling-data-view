@@ -12,6 +12,7 @@
 #include <qwt_plot_picker.h>
 #include <qwt_plot_zoomer.h>
 #include <qwt_plot_panner.h>
+#include <qwt_plot_canvas.h>
 #include <qwt_picker_machine.h>
 #include <qwt_painter.h>
 #include <qwt_scale_widget.h>
@@ -40,7 +41,7 @@ public:
 	  _type(type)
 	  {}
  
-    virtual QwtText label(double v) const
+	virtual QwtText label(double v) const
     {
 		if (_type.compare("time")==0)
 		{
@@ -59,7 +60,7 @@ private:
 };
 
 /******************************************************/
-QwtCustomPlotZoomer::QwtCustomPlotZoomer(int x_axis, int y_axis, QwtPlotCanvas* canvas, bool do_replot):
+QwtCustomPlotZoomer::QwtCustomPlotZoomer(int x_axis, int y_axis, QWidget* canvas, bool do_replot):
 	QwtPlotZoomer(x_axis,y_axis,canvas,do_replot)
 {}
 
@@ -108,7 +109,7 @@ void QwtCustomPlotZoomer::drawRubberBand(QPainter* painter) const
 QwtCustomPlotPicker::QwtCustomPlotPicker(
 	int x_axis, int y_axis, 
 	boost::shared_ptr<DataLog> data_log, 
-	QwtPlotCanvas* canvas, 
+	QWidget* canvas, 
 	boost::shared_ptr<QCheckBox> hr_cb,
 	boost::shared_ptr<QCheckBox> speed_cb,
 	boost::shared_ptr<QCheckBox> alt_cb,

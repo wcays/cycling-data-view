@@ -39,7 +39,7 @@
 #define COMPANY_NAME "RideViewer"
 #define APP_NAME "RiderViewer"
 #define VERSION_INFO "Version 1.4 (Feb 2013)\n     http://code.google.com/p/cycling-data-view/ \n     grant.grubb@gmail.com"
-#define USER_DIRECTORY QDesktopServices::storageLocation(QDesktopServices::DataLocation) + "/RideViewer/"
+#define USER_DIRECTORY QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/RideViewer/"
 #define GARMIN_LOG_DIRECTORY "/garmin/activities/"
 
 /******************************************************/
@@ -230,7 +230,7 @@ void MainWindow::setLap(int lap_index)
  void MainWindow::help()
  {
 	// Launch help in Qt web browser
-	QWebView *help_view = new QWebView();
+	QWebEngineView *help_view = new QWebEngineView();
     help_view->load(QUrl("http://code.google.com/p/cycling-data-view/wiki/Help"));
     help_view->show();
  }
